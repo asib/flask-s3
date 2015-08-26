@@ -222,6 +222,7 @@ def create_all(app, user=None, password=None, bucket_name=None,
     if not bucket_name:
         raise ValueError("No bucket name provided.")
     location = location or app.config.get('S3_REGION')
+    logger.info(location)
 
     # build list of static files
     all_files = _gather_files(app, include_hidden)
