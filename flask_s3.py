@@ -11,6 +11,7 @@ from boto.s3 import connect_to_region
 from boto.exception import S3CreateError, S3ResponseError
 from boto.s3.key import Key
 
+logging.info('Starting logger for flask_s3')
 logger = logging.getLogger('flask_s3')
 
 
